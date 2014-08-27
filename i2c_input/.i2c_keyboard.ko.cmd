@@ -1,0 +1,1 @@
+cmd_/home/albert/worktab/android/driver/i2c_input/i2c_keyboard.ko := arm-eabi-ld -EL -r  -T /home/albert/work/a31_sdk/lichee/linux-3.3/scripts/module-common.lds --build-id  -o /home/albert/worktab/android/driver/i2c_input/i2c_keyboard.ko /home/albert/worktab/android/driver/i2c_input/i2c_keyboard.o /home/albert/worktab/android/driver/i2c_input/i2c_keyboard.mod.o
