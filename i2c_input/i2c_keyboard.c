@@ -32,7 +32,7 @@ static struct i2c_board_info kb_i2c_devs[] __initdata = {
     },
 };
 
-//i2c_register_board_info(0, kb_i2c_devs, ARRAY_SIZE(kb_i2c_devs)); 
+//i2c_register_board_info(1, kb_i2c_devs, ARRAY_SIZE(kb_i2c_devs)); 
 /******/
 
 static const struct i2c_device_id i2c_keyborad_ids[] = {
