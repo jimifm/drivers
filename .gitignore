@@ -1,0 +1,18 @@
+# Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+# Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+#dir
+dist
+build
+#c/cpp
+*.o
+*.ko
+#java
+*.class
