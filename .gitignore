@@ -13,6 +13,8 @@ dist
 build
 #c/cpp
 *.o
+#module
+*.mod.c
 *.ko
 #java
 *.class
