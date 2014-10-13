@@ -5,7 +5,7 @@ else
 CURRENT_PATH:=$(shell pwd)
  #the absolute path
 #LINUX_KERNEL_PATH:=/lib/modules/$(shell uname -r)/build
-LINUX_KERNEL_PATH:= /home/albert/work/a31_sdk/lichee/linux-3.3/
+LINUX_KERNEL_PATH:= /work/a31/a31_sdk/lichee/linux-3.3/
  #complie object
 default:
 	make -C $(LINUX_KERNEL_PATH) M=$(CURRENT_PATH) modules

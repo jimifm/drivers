@@ -1,0 +1,1 @@
+cmd_/home/albert/worktab/android/driver/i2c_hdmi/i2c_hdmi.ko := arm-linux-androideabi-ld -EL -r  -T /work/a31/a31_sdk/lichee/linux-3.3/scripts/module-common.lds --build-id  -o /home/albert/worktab/android/driver/i2c_hdmi/i2c_hdmi.ko /home/albert/worktab/android/driver/i2c_hdmi/i2c_hdmi.o /home/albert/worktab/android/driver/i2c_hdmi/i2c_hdmi.mod.o

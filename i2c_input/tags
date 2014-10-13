@@ -1,0 +1,43 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CURRENT_PATH	Makefile	/^CURRENT_PATH:=$(shell pwd)$/;"	m
+I2C_KB_KEYNUM	i2c_keyboard.c	16;"	d	file:
+LINUX_KERNEL_PATH	Makefile	/^LINUX_KERNEL_PATH:= \/home\/albert\/work\/a31_sdk\/lichee\/linux-3.3\/$/;"	m
+TIME_PERIOD_MS	i2c_keyboard.c	15;"	d	file:
+__initdata	i2c_keyboard.c	/^static struct i2c_board_info kb_i2c_devs[] __initdata = {$/;"	v	typeref:struct:kb_i2c_devs	file:
+__this_module	i2c_keyboard.mod.c	/^struct module __this_module$/;"	v	typeref:struct:module
+__used	i2c_keyboard.mod.c	/^__used$/;"	v	file:
+__used	i2c_keyboard.mod.c	/^__used$/;"	v	typeref:struct:____versions	file:
+board_info	i2c_keyboard.c	/^	struct i2c_board_info	board_info;$/;"	m	struct:i2c_devinfo	typeref:struct:i2c_devinfo::i2c_board_info	file:
+busnum	i2c_keyboard.c	/^	int			busnum;$/;"	m	struct:i2c_devinfo	file:
+client	i2c_keyboard.c	/^    struct i2c_client *client;$/;"	m	struct:i2c_kb	typeref:struct:i2c_kb::i2c_client	file:
+cycle_time	i2c_keyboard.c	/^    u32 cycle_time;\/\/us$/;"	m	struct:ik_platform_data	file:
+i2c_devinfo	i2c_keyboard.c	/^struct i2c_devinfo {$/;"	s	file:
+i2c_kb	i2c_keyboard.c	/^static struct ik_platform_data i2c_kb = {$/;"	v	typeref:struct:ik_platform_data	file:
+i2c_kb	i2c_keyboard.c	/^struct i2c_kb{$/;"	s	file:
+i2c_kb_close	i2c_keyboard.c	/^static void i2c_kb_close(struct input_dev *dev)$/;"	f	file:
+i2c_kb_open	i2c_keyboard.c	/^static int i2c_kb_open(struct input_dev *dev)$/;"	f	file:
+i2c_keborad_remove	i2c_keyboard.c	/^static int i2c_keborad_remove(struct i2c_client *client)$/;"	f	file:
+i2c_keyborad_ids	i2c_keyboard.c	/^static const struct i2c_device_id i2c_keyborad_ids[] = {$/;"	v	typeref:struct:i2c_device_id	file:
+i2c_keyborad_probe	i2c_keyboard.c	/^static int i2c_keyborad_probe(struct i2c_client *client,$/;"	f	file:
+i2c_timer_handle	i2c_keyboard.c	/^static void i2c_timer_handle(unsigned long arg)$/;"	f	file:
+i2ckb_catnap	i2c_keyboard.c	/^static inline void i2ckb_catnap(struct i2c_client *client)$/;"	f	file:
+i2ckb_fall_deepsleep	i2c_keyboard.c	/^static inline void i2ckb_fall_deepsleep(struct i2c_client *client)$/;"	f	file:
+i2ckb_read_reg	i2c_keyboard.c	/^static int i2ckb_read_reg(struct i2c_client *client, int reg)$/;"	f	file:
+i2ckb_write_reg	i2c_keyboard.c	/^static int i2ckb_write_reg(struct i2c_client *client, u8 reg, u8 val) $/;"	f	file:
+ik_platform_data	i2c_keyboard.c	/^struct ik_platform_data{$/;"	s	file:
+input_dev	i2c_keyboard.c	/^    struct input_dev* input_dev;$/;"	m	struct:i2c_kb	typeref:struct:i2c_kb::input_dev	file:
+keyborad_driver	i2c_keyboard.c	/^static struct i2c_driver keyborad_driver = {$/;"	v	typeref:struct:i2c_driver	file:
+keyborad_exit	i2c_keyboard.c	/^module_exit(keyborad_exit);$/;"	v
+keyborad_exit	i2c_keyboard.c	/^static void __exit keyborad_exit(void)$/;"	f	file:
+keyborad_init	i2c_keyboard.c	/^module_init(keyborad_init);$/;"	v
+keyborad_init	i2c_keyboard.c	/^static int __init keyborad_init(void)$/;"	f	file:
+keycodes	i2c_keyboard.c	/^    unsigned short keycodes[I2C_KB_KEYNUM];$/;"	m	struct:i2c_kb	file:
+keypad	i2c_keyboard.c	/^static struct i2c_kb *keypad;$/;"	v	typeref:struct:i2c_kb	file:
+list	i2c_keyboard.c	/^	struct list_head	list;$/;"	m	struct:i2c_devinfo	typeref:struct:i2c_devinfo::list_head	file:
+obj-m	Makefile	/^obj-m:=i2c_keyboard.o$/;"	m
+s_timer	i2c_keyboard.c	/^    struct timer_list s_timer;$/;"	m	struct:i2c_kb	typeref:struct:i2c_kb::timer_list	file:
