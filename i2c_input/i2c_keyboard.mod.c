@@ -51,4 +51,4 @@ __attribute__((section(".modinfo"))) =
 
 MODULE_ALIAS("i2c:swit");
 
-MODULE_INFO(srcversion, "B5BD06F56C62CBA9D2693FF");
+MODULE_INFO(srcversion, "CD7733C874D9F6DEDD83CA8");

@@ -84,11 +84,46 @@ void i2ckb_build_keymap()
 
 	struct input_dev *input_dev = keypad->input_dev;
 	int i;
-    for(i = 0; i< I2C_KB_KEYNUM; i++)
-    {
-        keypad->keycodes[i] = 102 + i;
-        __set_bit(102 + i, input_dev->keybit);
-    }
+    //for(i = 0; i< I2C_KB_KEYNUM; i++)
+    //{
+        keypad->keycodes[1] = 102;
+        __set_bit(102 , input_dev->keybit);//home
+        keypad->keycodes[2] = 1;
+        __set_bit(1 , input_dev->keybit);//esc
+        keypad->keycodes[3] = 14;
+        __set_bit(14 , input_dev->keybit);//backspace
+        keypad->keycodes[4] = 11;
+        __set_bit(11 , input_dev->keybit);//0
+        
+        keypad->keycodes[5] = 2;
+        __set_bit(2 , input_dev->keybit);//1
+        keypad->keycodes[6] = 3;
+        __set_bit(3 , input_dev->keybit);//2
+        keypad->keycodes[7] = 4;
+        __set_bit(4 , input_dev->keybit);//3
+        keypad->keycodes[8] = 5;
+        __set_bit(5 , input_dev->keybit);//4
+        keypad->keycodes[9] = 28;
+        __set_bit(28 , input_dev->keybit);//enter
+
+        keypad->keycodes[12] = 103;
+        __set_bit(103 , input_dev->keybit);//up
+        keypad->keycodes[14] = 105;
+        __set_bit(105 , input_dev->keybit);//left
+        keypad->keycodes[15] = 106;
+        __set_bit(106 , input_dev->keybit);//right
+        keypad->keycodes[13] = 108;
+        __set_bit(108 , input_dev->keybit);//down
+        keypad->keycodes[16] = 114;
+        __set_bit(114 , input_dev->keybit);//volumedown
+        keypad->keycodes[17] = 115;
+        __set_bit(115 , input_dev->keybit);//volumeup
+        keypad->keycodes[18] = 59;
+        __set_bit(59 , input_dev->keybit);//f1
+        keypad->keycodes[19] = 108;
+        __set_bit(60 , input_dev->keybit);//f2
+        
+    //}
     __clear_bit(KEY_RESERVED, input_dev->keybit);
 }
 
@@ -193,7 +228,7 @@ static inline void i2ckb_fall_deepsleep(struct i2c_client *client)
     i2ckb_write_reg(client, 3, 4);
 }
 static unsigned char cur_code = 0;
-static unsigned char cur_encoder = 0;
+//static unsigned char cur_encoder = 0;
 void i2ckb_wq_fun(unsigned long data)
 {
 
@@ -226,15 +261,15 @@ void i2ckb_wq_fun(unsigned long data)
 
     if(val == 0){
         if(scancode != 0){
-            input_event(keypad->input_dev, EV_MSC, MSC_SCAN, scancode + 12);
+            input_event(keypad->input_dev, EV_MSC, MSC_SCAN, scancode + 102);
             input_report_key(keypad->input_dev,keypad->keycodes[scancode], 1);
             input_sync(keypad->input_dev);
             //cur_encoder = scancode;
-            printk("key down: %d\n",scancode);
-            input_event(keypad->input_dev, EV_MSC, MSC_SCAN, scancode + 12);
+            printk("encoder key : %d\n",scancode);
+            input_event(keypad->input_dev, EV_MSC, MSC_SCAN, scancode + 102);
             input_report_key(keypad->input_dev,keypad->keycodes[scancode], 0);
             input_sync(keypad->input_dev);
-            printk("key release: %d\n",scancode);
+            //printk("key release: %d\n",scancode);
             //cur_encoder = 0;
         }
        /* else
@@ -304,7 +339,7 @@ static void i2c_kb_close(struct input_dev *dev)
 {
     //struct i2c_kb *keypad = input_get_drvdata(dev);
     printk("usr space close fd!\n");
-   del_timer_sync(&keypad->s_timer);
+   del_timer_sync(&keypad->s_timer);//multiple cpu 
     //i2ckb_fall_deepsleep(keypad->client);
 }
 
