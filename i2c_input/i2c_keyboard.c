@@ -120,7 +120,7 @@ void i2ckb_build_keymap()
         __set_bit(115 , input_dev->keybit);//volumeup
         keypad->keycodes[18] = 59;
         __set_bit(59 , input_dev->keybit);//f1
-        keypad->keycodes[19] = 108;
+        keypad->keycodes[19] = 60;//down !?
         __set_bit(60 , input_dev->keybit);//f2
         
     //}
