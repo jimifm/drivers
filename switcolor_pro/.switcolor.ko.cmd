@@ -1,0 +1,1 @@
+cmd_/home/albert/worktab/android/driver/switcolor_pro/switcolor.ko := arm-linux-androideabi-ld -EL -r  -T /work/a31/a31_sdk/lichee/linux-3.3/scripts/module-common.lds --build-id  -o /home/albert/worktab/android/driver/switcolor_pro/switcolor.ko /home/albert/worktab/android/driver/switcolor_pro/switcolor.o /home/albert/worktab/android/driver/switcolor_pro/switcolor.mod.o
